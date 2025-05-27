@@ -6,7 +6,7 @@ const Header = () => (
   <motion.header 
     initial={{ y: -20, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
-    className="bg-white shadow-sm sticky top-0 z-50"
+    className="bg-white shadow-sm sticky top-0 z-40"
   >
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
       <div className="flex justify-between items-center">
@@ -24,6 +24,24 @@ const Header = () => (
       </div>
     </div>
   </motion.header>
+);
+
+const FixedCTA = () => (
+  <div className="fixed bottom-0 left-0 right-0 bg-white/80 backdrop-blur-sm shadow-lg z-50 py-4 transform translate-y-0 transition-transform">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="hidden sm:block">
+        <div className="font-semibold text-flos-dark">Videokurz: Jak založit vyvýšený záhon</div>
+        <div className="text-flos-light">Pouze 299 Kč (sleva 40%)</div>
+      </div>
+      <a 
+        href="https://www.forendors.cz/p/809432646554884130"
+        className="btn-primary flex items-center gap-2"
+      >
+        <span>Začít s kurzem</span>
+        <FaPlay className="text-sm" />
+      </a>
+    </div>
+  </div>
 );
 
 const Hero = () => (
@@ -295,11 +313,12 @@ const Curriculum = () => {
 
 const App = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pb-20">
       <Header />
       <Hero />
       <Benefits />
       <Curriculum />
+      <FixedCTA />
     </div>
   );
 };
