@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaCheck, FaLeaf, FaHeart, FaBug, FaSun, FaHome, FaSeedling, FaPlay, FaShieldAlt } from 'react-icons/fa';
+import { FaCheck, FaLeaf, FaHeart, FaBug, FaSun, FaHome, FaSeedling, FaPlay, FaShieldAlt, FaClock, FaTools, FaSeedling as FaPlant, FaWater, FaArrowRight } from 'react-icons/fa';
 
 const Header = () => (
   <motion.header 
@@ -178,12 +178,122 @@ const Benefits = () => {
   );
 };
 
+const Curriculum = () => {
+  const lessons = [
+    {
+      title: 'Úvod a výhody',
+      duration: '1 min',
+      icon: <FaLeaf />,
+      topics: [
+        'Proč vyvýšený záhon',
+        'Co přesně tenhle kurz nabídne'
+      ]
+    },
+    {
+      title: 'Výběr místa a materiálu',
+      duration: '2 min',
+      icon: <FaHome />,
+      topics: [
+        'Kam postavit (slunce, stín, vítr)',
+        'Z čeho ho postavit (dřevo vs. cihly vs. palety)'
+      ]
+    },
+    {
+      title: 'Rám a drenáž',
+      duration: '2,5 min',
+      icon: <FaTools />,
+      topics: [
+        'Stavba rámu krok za krokem',
+        'Spodní vrstva: drenáž'
+      ]
+    },
+    {
+      title: 'Náplň a finální zemina',
+      duration: '2 min',
+      icon: <FaPlant />,
+      topics: [
+        'Vrstvení kompostu, listovky, substrátu',
+        'Základ hnojení'
+      ]
+    },
+    {
+      title: 'Výsadba a závěr',
+      duration: '2,5 min',
+      icon: <FaWater />,
+      topics: [
+        'Tip na rychle rostoucí plodiny',
+        'Základní rozestupy a zálivka'
+      ]
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-green-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl font-bold text-flos-dark mb-6">
+            Co se v kurzu naučíte?
+          </h2>
+          <p className="text-flos-gray text-lg">
+            Kompletní video průvodce založením vyvýšeného záhonu v 5 praktických lekcích
+          </p>
+        </div>
+        <div className="space-y-6 max-w-4xl mx-auto">
+          {lessons.map((lesson, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="flex items-start gap-6">
+                <div className="bg-green-100 p-4 rounded-lg text-flos-light text-2xl">
+                  {lesson.icon}
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-2">
+                    <h3 className="text-xl font-semibold text-flos-dark">{lesson.title}</h3>
+                    <div className="flex items-center gap-1 text-flos-muted">
+                      <FaClock className="text-sm" />
+                      <span className="text-sm">{lesson.duration}</span>
+                    </div>
+                  </div>
+                  <ul className="space-y-2">
+                    {lesson.topics.map((topic, topicIndex) => (
+                      <li key={topicIndex} className="flex items-center gap-2 text-flos-gray">
+                        <FaArrowRight className="text-flos-light text-sm flex-shrink-0" />
+                        {topic}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="mt-12 text-center"
+        >
+          <button className="btn-primary inline-flex items-center gap-2">
+            <span>Získat přístup ke kurzu</span>
+            <FaPlay className="text-sm" />
+          </button>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
 const App = () => {
   return (
     <div className="min-h-screen">
       <Header />
       <Hero />
       <Benefits />
+      <Curriculum />
     </div>
   );
 };
