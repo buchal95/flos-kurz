@@ -13,13 +13,6 @@ const Header = () => (
           <FaLeaf className="text-flos-light text-2xl" />
           <div className="text-2xl font-bold text-flos-dark">Zahradnictví Flos</div>
         </div>
-        <div className="text-right">
-          <a href="mailto:info@zahradnictvi-flos.cz" 
-             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-50 text-flos-dark hover:bg-green-100 transition-colors">
-            <span className="hidden sm:inline">Napište nám:</span>
-            <span className="font-medium">info@zahradnictvi-flos.cz</span>
-          </a>
-        </div>
       </div>
     </div>
   </motion.header>
