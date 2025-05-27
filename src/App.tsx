@@ -77,10 +77,13 @@ const Hero = () => (
               <span className="text-3xl font-bold text-flos-dark">299 Kč</span>
               <span className="bg-flos-light text-white px-3 py-1 rounded-full text-sm font-medium">-40 %</span>
             </div>
-            <button className="btn-primary w-full mb-4 flex items-center justify-center gap-2">
+            <a 
+              href="https://www.forendors.cz/p/809432646554884130"
+              className="btn-primary w-full mb-4 flex items-center justify-center gap-2"
+            >
               <span>Začít s kurzem</span>
               <FaPlay className="text-sm" />
-            </button>
+            </a>
             <p className="text-sm text-flos-muted text-center">
               Okamžitý přístup po zaplacení
             </p>
@@ -277,10 +280,13 @@ const Curriculum = () => {
           whileInView={{ opacity: 1, y: 0 }}
           className="mt-12 text-center"
         >
-          <button className="btn-primary inline-flex items-center gap-2">
+          <a 
+            href="https://www.forendors.cz/p/809432646554884130"
+            className="btn-primary inline-flex items-center gap-2"
+          >
             <span>Získat přístup ke kurzu</span>
             <FaPlay className="text-sm" />
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>
