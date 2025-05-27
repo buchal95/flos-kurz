@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaCheck, FaLeaf, FaHeart, FaBug, FaSun, FaHome, FaSeedling, FaPlay, FaShieldAlt, FaClock, FaTools, FaSeedling as FaPlant, FaWater, FaArrowRight } from 'react-icons/fa';
+import { FaCheck, FaLeaf, FaHeart, FaBug, FaSun, FaHome, FaSeedling, FaPlay, FaShieldAlt, FaClock, FaTools, FaSeedling as FaPlant, FaWater, FaArrowRight, FaStar, FaLock, FaInstagram, FaFacebook, FaCreditCard, FaDownload, FaQuestionCircle } from 'react-icons/fa';
 
 const Header = () => (
   <motion.header 
@@ -117,6 +117,9 @@ const Hero = () => (
               </button>
             </div>
           </div>
+          <p className="text-center text-flos-gray mt-4">
+            Podívejte se na ukázku: 30 s z lekce „Jak naplnit záhon".
+          </p>
         </motion.div>
       </div>
     </div>
@@ -183,6 +186,216 @@ const Benefits = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2 text-flos-dark">{benefit.title}</h3>
               <p className="text-flos-gray">{benefit.description}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const Instructor = () => (
+  <section className="py-20 bg-green-50">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="grid md:grid-cols-2 gap-12 items-center">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="space-y-6"
+        >
+          <h2 className="text-3xl font-bold text-flos-dark">O Václavu Maříkovi</h2>
+          <p className="text-lg text-flos-gray">
+            Václav Mařík je zakladatel a majitel Zahradnictví Flos, které funguje od roku 1991.
+          </p>
+          <p className="text-lg text-flos-gray">
+            Během více než 33 let praxe vypěstoval přes milion rostlin ročně a pomohl tisícům začínajících i pokročilých zahrádkářů.
+          </p>
+          <p className="text-lg text-flos-gray">
+            Ve videokurzu sdílí ryze praktické postupy, které sám ověřil ve své produkci.
+          </p>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+        >
+          <img 
+            src="https://images.pexels.com/photos/2132227/pexels-photo-2132227.jpeg" 
+            alt="Zahradník při práci" 
+            className="rounded-xl shadow-lg"
+          />
+        </motion.div>
+      </div>
+    </div>
+  </section>
+);
+
+const Bonus = () => (
+  <section className="py-20 bg-white">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center max-w-3xl mx-auto mb-16">
+        <h2 className="text-3xl font-bold text-flos-dark mb-6">Bonusové výhody</h2>
+      </div>
+      <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="bg-green-50 p-8 rounded-xl shadow-sm"
+        >
+          <div className="text-3xl text-flos-light mb-4">
+            <FaDownload />
+          </div>
+          <h3 className="text-xl font-semibold mb-4 text-flos-dark">
+            Sleva 10 % na vše v e-shopu
+          </h3>
+          <p className="text-flos-gray mb-4">
+            Uplatni kód <span className="font-bold bg-white px-2 py-1 rounded">FLOS10</span> při nákupu sazenic, substrátů i zahradních doplňků.
+          </p>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="bg-green-50 p-8 rounded-xl shadow-sm"
+        >
+          <div className="text-3xl text-flos-light mb-4">
+            <FaDownload />
+          </div>
+          <h3 className="text-xl font-semibold mb-4 text-flos-dark">
+            Plán pěstebního kalendáře
+          </h3>
+          <p className="text-flos-gray mb-4">
+            Ke stažení zdarma: „Plán pěstebního kalendáře" (A4), který ti pomůže naplánovat setbu a sklizeň po celý rok.
+          </p>
+        </motion.div>
+      </div>
+    </div>
+  </section>
+);
+
+const Testimonials = () => (
+  <section className="py-20 bg-green-50">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center max-w-3xl mx-auto mb-16">
+        <h2 className="text-3xl font-bold text-flos-dark mb-6">Co říkají naši zákazníci</h2>
+      </div>
+      <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="bg-white p-8 rounded-xl shadow-sm"
+        >
+          <div className="flex text-flos-light mb-4">
+            {[...Array(5)].map((_, i) => (
+              <FaStar key={i} />
+            ))}
+          </div>
+          <p className="text-lg text-flos-gray mb-4">
+            „Tenhle kurz mi ukázal, jak jednoduše začít. Už po pár týdnech mám na záhoně první ředkvičky!"
+          </p>
+          <p className="font-medium text-flos-dark">– Jana, Brno</p>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="bg-white p-8 rounded-xl shadow-sm"
+        >
+          <div className="flex text-flos-light mb-4">
+            {[...Array(4)].map((_, i) => (
+              <FaStar key={i} />
+            ))}
+            <FaStar className="text-gray-300" />
+          </div>
+          <p className="text-lg text-flos-gray mb-4">
+            „Skvělý přístup, praktické tipy a okamžitý výsledek. Doporučuji všem, kteří chtějí pěstovat bez zbytečných komplikací."
+          </p>
+          <p className="font-medium text-flos-dark">– Petr, Praha</p>
+        </motion.div>
+      </div>
+      <div className="flex justify-center gap-8 mt-12">
+        <a href="https://instagram.com/zahradnictviflos" className="text-flos-dark hover:text-flos-light transition-colors flex items-center gap-2">
+          <FaInstagram className="text-2xl" />
+          <span>@zahradnictviflos</span>
+        </a>
+        <a href="https://facebook.com/ZahradnictviFlos" className="text-flos-dark hover:text-flos-light transition-colors flex items-center gap-2">
+          <FaFacebook className="text-2xl" />
+          <span>Zahradnictví Flos</span>
+        </a>
+      </div>
+    </div>
+  </section>
+);
+
+const Guarantee = () => (
+  <section className="py-20 bg-white">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
+        <div className="bg-green-50 p-8 rounded-xl text-center">
+          <div className="text-4xl text-flos-light mb-6">
+            <FaShieldAlt />
+          </div>
+          <h2 className="text-2xl font-bold text-flos-dark mb-4">30 dní na vrácení peněz</h2>
+          <p className="text-lg text-flos-gray mb-8">
+            Pokud kurz nesplní vaše očekávání, napište nám do 30 dní a my vám bez otázek vrátíme peníze.
+          </p>
+          <div className="flex justify-center gap-8 mb-8">
+            <FaCreditCard className="text-4xl text-flos-muted" title="Visa" />
+            <FaCreditCard className="text-4xl text-flos-muted" title="Mastercard" />
+            <FaCreditCard className="text-4xl text-flos-muted" title="Maestro" />
+            <FaCreditCard className="text-4xl text-flos-muted" title="Bankovní převod" />
+          </div>
+          <div className="flex items-center justify-center gap-2 text-flos-muted">
+            <FaLock />
+            <span>Bezpečná platba SSL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+const FAQ = () => {
+  const faqs = [
+    {
+      question: 'Jak kurz funguje technicky?',
+      answer: 'Kurz je dostupný jako online video, ke kterému se přihlásíte přes libovolný prohlížeč. Žádná instalace, žádné aplikace – stačí internet a můžete sledovat opakovaně.'
+    },
+    {
+      question: 'Co když nemám vlastní zahradu?',
+      answer: 'Kurz můžete využít i na balkon, terasu nebo do vyvýšeného záhonu v květináči. Všechny postupy fungují i v menších prostorech.'
+    },
+    {
+      question: 'Jak dlouho mám k videu přístup?',
+      answer: 'Přístup je neomezený – video si můžete pouštět kdykoli a kolikrát chcete.'
+    },
+    {
+      question: 'Potřebuji nějaké speciální nástroje?',
+      answer: 'Stačí základní zahradnické nářadí: lopatka, hrábě, nůžky a rukavice. Detailní seznam najdete ve staženém PDF Kalendáře.'
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-green-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl font-bold text-flos-dark mb-6">Často kladené otázky</h2>
+        </div>
+        <div className="max-w-4xl mx-auto space-y-6">
+          {faqs.map((faq, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="bg-white p-6 rounded-xl shadow-sm"
+            >
+              <div className="flex gap-4">
+                <FaQuestionCircle className="text-flos-light text-xl flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold text-flos-dark mb-2">{faq.question}</h3>
+                  <p className="text-flos-gray">{faq.answer}</p>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -309,7 +522,12 @@ const App = () => {
       <Header />
       <Hero />
       <Benefits />
+      <Instructor />
       <Curriculum />
+      <Bonus />
+      <Testimonials />
+      <Guarantee />
+      <FAQ />
       <FixedCTA />
     </div>
   );
