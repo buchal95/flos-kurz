@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --flos-dark: #2c5f2d;
+  --flos-light: #97bc62;
+  --flos-gray: #555;
+  --flos-muted: #666;
+  --flos-bg: #ffffff;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-gray-800 bg-gray-50;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[var(--flos-light)] text-white px-6 py-3 rounded-lg font-medium 
+    transition-all hover:bg-[#7fa04f] focus:ring-2 focus:ring-[var(--flos-light)] focus:ring-opacity-50;
+  }
+}
