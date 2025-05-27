@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCheck, FaLeaf, FaHeart, FaBug, FaSun, FaHome, FaSeedling, FaPlay, FaShieldAlt, FaClock, FaTools, FaSeedling as FaPlant, FaWater, FaArrowRight } from 'react-icons/fa';
 
