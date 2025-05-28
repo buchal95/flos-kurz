@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --flos-dark: #2c5f2d;
-  --flos-light: #97bc62;
-  --flos-gray: #555;
-  --flos-muted: #666;
+  --flos-dark: #1a472a;
+  --flos-light: #7fb069;
+  --flos-gray: #374151;
+  --flos-muted: #6b7280;
   --flos-bg: #ffffff;
 }
 
@@ -18,13 +20,21 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-[var(--flos-light)] text-white px-6 py-3 rounded-lg font-medium 
-    transition-all hover:bg-[#7fa04f] hover:scale-[1.02] focus:ring-2 
-    focus:ring-[var(--flos-light)] focus:ring-opacity-50 shadow-sm 
-    hover:shadow-md active:scale-[0.98];
+    @apply bg-[var(--flos-light)] text-white px-6 py-3 rounded-xl font-medium 
+    transition-all duration-300 hover:bg-[#6a9657] hover:scale-[1.02] focus:ring-2 
+    focus:ring-[var(--flos-light)] focus:ring-opacity-50 shadow-soft 
+    hover:shadow-hover active:scale-[0.98];
+  }
+
+  .section-padding {
+    @apply py-24;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-soft hover:shadow-hover transition-all duration-300;
   }
 }
 
 .backdrop-blur-sm {
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
 }
