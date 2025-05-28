@@ -547,8 +547,7 @@ const Curriculum = () => {
       icon: <FaTools />,
       topics: [
         'Stavba rámu krok za krokem',
-        'Spodní vrstva: dren
-áž'
+        'Spodní vrstva: drenáž'
       ]
     },
     {
