@@ -301,7 +301,23 @@ const Bonus = () => {
             Bonusové výhody
           </motion.h2>
         </div>
-        <div className="grid md:grid-cols-1 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            className="card p-8"
+            whileHover={{ scale: 1.02 }}
+          >
+            <div className="text-3xl text-flos-light mb-6">
+              <FaDownload />
+            </div>
+            <h3 className="text-xl font-semibold mb-4 text-flos-dark">
+              Sleva 10 % na vše v e-shopu
+            </h3>
+            <p className="text-flos-gray mb-4 leading-relaxed">
+              Získáte 10 % kód při nákupu sazenic, substrátů, zahradních doplňků, zkrátka všeho.
+            </p>
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -624,7 +640,8 @@ const Curriculum = () => {
             className="btn-primary inline-flex items-center gap-2"
           >
             <span>Získat přístup ke kurzu</span>
-            <FaPlay className="text-sm" />
+            <F
+aPlay className="text-sm" />
           </a>
         </motion.div>
       </div>
