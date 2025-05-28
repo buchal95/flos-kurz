@@ -301,23 +301,7 @@ const Bonus = () => {
             Bonusové výhody
           </motion.h2>
         </div>
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            className="card p-8"
-            whileHover={{ scale: 1.02 }}
-          >
-            <div className="text-3xl text-flos-light mb-6">
-              <FaDownload />
-            </div>
-            <h3 className="text-xl font-semibold mb-4 text-flos-dark">
-              Sleva 10 % na vše v e-shopu
-            </h3>
-            <p className="text-flos-gray mb-4 leading-relaxed">
-              Uplatni kód <span className="font-bold bg-green-50 px-3 py-1 rounded-lg">FLOS10</span> při nákupu sazenic, substrátů i zahradních doplňků.
-            </p>
-          </motion.div>
+        <div className="grid md:grid-cols-1 gap-8 max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
