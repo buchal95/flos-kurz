@@ -1,6 +1,27 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaCheck, FaLeaf, FaHeart, FaBug, FaSun, FaHome, FaSeedling, FaPlay, FaShieldAlt, FaClock, FaTools, FaSeedling as FaPlant, FaWater, FaArrowRight, FaStar, FaLock, FaInstagram, FaFacebook, FaCreditCard, FaDownload, FaQuestionCircle } from 'react-icons/fa';
+import { 
+  FaCheck, 
+  FaLeaf, 
+  FaHeart, 
+  FaBug, 
+  FaSun, 
+  FaHome, 
+  FaSeedling, 
+  FaPlay, 
+  FaShieldAlt, 
+  FaClock, 
+  FaTools, 
+  FaWater, 
+  FaArrowRight, 
+  FaStar, 
+  FaLock, 
+  FaInstagram, 
+  FaFacebook, 
+  FaCreditCard, 
+  FaDownload, 
+  FaQuestionCircle 
+} from 'react-icons/fa';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -543,7 +564,7 @@ const Curriculum = () => {
     {
       title: 'Náplň a finální zemina',
       duration: '2 min',
-      icon: <FaPlant />,
+      icon: <FaSeedling />,
       topics: [
         'Vrstvení kompostu, listovky, substrátu',
         'Základ hnojení'
@@ -642,6 +663,7 @@ const App = () => {
   return (
     <div className="min-h-screen pb-20">
       <Header />
+      
       <Hero />
       <Benefits />
       <Instructor />
