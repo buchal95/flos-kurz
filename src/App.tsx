@@ -56,16 +56,6 @@ const Hero = () => {
             variants={fadeIn}
             transition={{ duration: 0.5 }}
           >
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-flos-dark mb-8"
-            >
-              <FaShieldAlt className="text-flos-light" />
-              <span>100% záruka spokojenosti</span>
-            </motion.div>
-            
             <h1 className="text-4xl md:text-5xl font-bold text-flos-dark mb-8 leading-tight">
               Vypěstujte si vlastní <span className="text-flos-light">zdravou zeleninu</span>
             </h1>
@@ -661,6 +651,7 @@ const App = () => {
       <Guarantee />
       <FAQ />
       <FixedCTA />
+    
     </div>
   );
 };
