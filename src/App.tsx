@@ -47,7 +47,7 @@ const Hero = () => {
   const y = useTransform(scrollY, [0, 500], [0, 150]);
 
   return (
-    <section className="section-padding bg-gradient-to-b from-green-50 to-white overflow-hidden">
+    <section className="pt-8 pb-24 bg-gradient-to-b from-green-50 to-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -651,7 +651,6 @@ const App = () => {
       <Guarantee />
       <FAQ />
       <FixedCTA />
-    
     </div>
   );
 };
