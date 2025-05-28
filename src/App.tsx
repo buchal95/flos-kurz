@@ -640,8 +640,7 @@ const Curriculum = () => {
             className="btn-primary inline-flex items-center gap-2"
           >
             <span>Získat přístup ke kurzu</span>
-            <F
-aPlay className="text-sm" />
+            <FaPlay className="text-sm" />
           </a>
         </motion.div>
       </div>
